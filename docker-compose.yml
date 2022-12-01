@@ -16,7 +16,7 @@ services:
       - influxdb-storage:/var/lib/influxdb2:rw
     env_file:
       - .env
-    entrypoint: ["./influxdb_entrypoint.sh"]
+    entrypoint: ["./entrypoint.sh"]
     restart: on-failure:10
     ports:
       - ${DOCKER_INFLUXDB_INIT_PORT}:8086
@@ -36,7 +36,11 @@ services:
   grafana:
     image: grafana/grafana-oss:latest
     volumes:
-      - grafana-storage:/var/lib/grafana:rw
+      - ./grafana_mount/data:/var/lib/grafana:rw
+      - ./grafana_mount/config:/etc/grafana:rw
+      - ./logs:/var/log/grafana:rw
+      - ./grafana_mount/plugins:/var/lib/grafana/plugins:rw
+
     env_file:
       - .env
     depends_on:
