@@ -4,10 +4,7 @@
 
 # Telegraf, InfluxDB, Grafana (TIG) Stack
 
-Gain the ability to analyze and monitor telemetry data by deploying the TIG stack within minutes using [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
-
-
-
+Get up and running with your own data in TIG within minutes.
 
 ## ⚡️ Getting Started
 
@@ -23,37 +20,21 @@ Navigate to the project directory
 cd tig-stack
 ```
 
-Change the environment variables define in `.env` that are used to setup and deploy the stack
-```bash
-├── telegraf/
-├── .env         <---
-├── docker-compose.yml
-├── entrypoint.sh
-└── ...
-```
-
-Customize the `telegraf.conf` file which will be mounted to the container as a persistent volume
-
-```bash
-├── telegraf/
-│   ├── telegraf.conf <---
-├── .env
-├── docker-compose.yml
-├── entrypoint.sh
-└── ...
-```
-
 Start the services
 ```bash
 docker-compose up -d
 ```
-## Docker Images Used (Official & Verified)
+
+## Docker Images Tested
+Some versions is set to latest i docker compose.
+
+[**Mosquitto**]() / `2.0.15` 
 
 [**Telegraf**](https://hub.docker.com/_/telegraf) / `1.19`
 
 [**InfluxDB**](https://hub.docker.com/_/influxdb) / `2.1.1`
 
-[**Grafana-OSS**](https://hub.docker.com/r/grafana/grafana-oss) / `8.4.3`
+[**Grafana-OSS**](https://hub.docker.com/r/grafana/grafana-oss) / `9.2.6` (set to latest in compose)
 
 
 
