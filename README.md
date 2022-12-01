@@ -25,6 +25,17 @@ Start the services
 docker-compose up -d
 ```
 
+Install python dependencies 
+```bash
+pip install -r requirements.txt
+```
+
+Start data generator
+```bash
+python dummy_data_pubber.py
+```
+
+
 ## Docker Images Tested
 Some versions is set to latest i docker compose.
 
