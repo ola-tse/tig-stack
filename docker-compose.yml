@@ -37,9 +37,7 @@ services:
     image: grafana/grafana-oss:latest
     volumes:
       - ./grafana_mount/data:/var/lib/grafana:rw
-      - ./grafana_mount/config:/etc/grafana:rw
       - ./logs:/var/log/grafana:rw
-      - ./grafana_mount/plugins:/var/lib/grafana/plugins:rw
 
     env_file:
       - .env
