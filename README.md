@@ -1,17 +1,17 @@
-
-![Logo](https://user-images.githubusercontent.com/64506580/159311466-f720a877-6c76-403a-904d-134addbd6a86.png)
-
-
-# Telegraf, InfluxDB, Grafana (TIG) Stack
+# Telegraf, InfluxDB, Grafana (TIG) Stack + MQTT broker and data generator
 
 Get up and running with your own data in TIG within minutes.
 
 ## ⚡️ Getting Started
 
+### Prereqs: 
+* Docker 
+* Python
+
 Clone the project
 
 ```bash
-git clone https://github.com/huntabyte/tig-stack.git
+git clone https://github.com/ola-tse/tig-stack.git
 ```
 
 Navigate to the project directory
