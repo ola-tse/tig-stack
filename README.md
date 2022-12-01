@@ -34,8 +34,6 @@ Start data generator
 ```bash
 python dummy_data_pubber.py
 ```
-[**Grafana dashboard**](http://localhost:3000/)
-[**InfluxDB dashboard**](http://localhost:8086/)
 
 
 ## Docker Images Tested
