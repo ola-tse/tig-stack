@@ -39,7 +39,7 @@ services:
   grafana:
     container_name: tig-grafana
     #image: grafana/grafana-oss:latest
-    build: ./grafana_image
+    build: ./grafana
     #volumes:
       #- grafana-storage:/var/lib/grafana:rw
       #- ./logs:/var/log/grafana:rw
