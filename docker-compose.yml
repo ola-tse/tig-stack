@@ -2,6 +2,7 @@ version: "3"
 
 services:
   mosquitto:
+    container_name: tig-broker
     image: eclipse-mosquitto:2
     volumes:
       - ./mosquitto/:/mosquitto/config/:ro
@@ -11,6 +12,7 @@ services:
       - 9001:9001
 
   influxdb:
+    container_name: tig-influxdb
     image: influxdb:2.1.1
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
@@ -22,6 +24,7 @@ services:
       - ${DOCKER_INFLUXDB_INIT_PORT}:8086
 
   telegraf:
+    container_name: tig-telegraf
     image: telegraf:1.19
     volumes:
       - ${TELEGRAF_CFG_PATH}:/etc/telegraf/telegraf.conf:rw
@@ -34,8 +37,9 @@ services:
     restart: on-failure:10
 
   grafana:
+    container_name: tig-grafana
     #image: grafana/grafana-oss:latest
-    build: .
+    build: ./grafana_image
     #volumes:
       #- grafana-storage:/var/lib/grafana:rw
       #- ./logs:/var/log/grafana:rw
@@ -48,6 +52,7 @@ services:
       - ${GRAFANA_PORT}:3000
 
   datagen:
+    container_name: tig-generator
     build: ./data_generator
     env_file:
       - .env

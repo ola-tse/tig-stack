@@ -5,27 +5,26 @@ Get up and running with your own data in TIG within minutes.
 ## ⚡️ Getting Started
 
 ### Prereqs: 
-* Docker 
-* Python
+* Docker
 
-Clone the project
+Clone
 
 ```bash
 git clone https://github.com/ola-tse/tig-stack.git
 ```
 
-Navigate to the project directory
+Navigate
 
 ```bash
 cd tig-stack
 ```
 
-build the services
+Build
 ```bash
 docker-compose build
 ```
 
-Run the services
+Run
 ```bash
 docker-compose up
 ```
