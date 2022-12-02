@@ -20,21 +20,14 @@ Navigate to the project directory
 cd tig-stack
 ```
 
-Start the services
+build the services
 ```bash
-docker-compose up -d
+docker-compose build
 ```
 
-Install python dependencies
-(You might need sudo before "pip" and/or "pip3" insted of "pip" depending of your installation)
+Run the services
 ```bash
-pip install -r requirements.txt
-```
-
-Start data generator
-(You might need sudo before "python" and/or "python3" insted of "python" depending of your installation)
-```bash
-python dummy_data_pubber.py
+docker-compose up
 ```
 
 
@@ -52,7 +45,7 @@ Some versions is set to latest i docker compose.
 
 [**InfluxDB**](http://hub.docker.com/_/influxdb) / `2.1.1`
 
-[**Grafana-OSS**](https://hub.docker.com/r/grafana/grafana-oss) / `9.2.6` (set to latest in compose)
+[**Grafana-OSS**](https://hub.docker.com/r/grafana/grafana-oss) / `9.2.6` 
 
 
 

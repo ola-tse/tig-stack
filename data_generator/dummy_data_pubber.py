@@ -2,7 +2,7 @@ import time
 import numpy as np
 import paho.mqtt.client as mqtt
 
-broker_url = "127.0.0.1"
+broker_url = "tig-stack-mosquitto-1"
 broker_port = 1883
 
 def on_connect(client, userdata, flags, rc):

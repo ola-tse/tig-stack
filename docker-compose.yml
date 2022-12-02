@@ -34,10 +34,11 @@ services:
     restart: on-failure:10
 
   grafana:
-    image: grafana/grafana-oss:latest
-    volumes:
-      - ./grafana_mount/data:/var/lib/grafana:rw
-      - ./logs:/var/log/grafana:rw
+    #image: grafana/grafana-oss:latest
+    build: .
+    #volumes:
+      #- grafana-storage:/var/lib/grafana:rw
+      #- ./logs:/var/log/grafana:rw
 
     env_file:
       - .env
@@ -45,6 +46,15 @@ services:
       - influxdb
     ports:
       - ${GRAFANA_PORT}:3000
+
+  datagen:
+    build: ./data_generator
+    env_file:
+      - .env
+    depends_on:
+      - influxdb
+      - mosquitto
+    restart: on-failure:10
 
 volumes:
   grafana-storage:
