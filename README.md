@@ -31,6 +31,9 @@ docker-compose up
 
 
 [**Grafana dashboard**](http://localhost:3000)
+UN: admin
+PW: admin
+(you can select skip when prompted with new password message)
 
 [**InfluxDB Dashboard**](http://localhost:8086) 
 
