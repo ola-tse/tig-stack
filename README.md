@@ -38,9 +38,9 @@ python dummy_data_pubber.py
 ```
 
 
-[**Grafana dashboard**](https://localhost:3000)
+[**Grafana dashboard**](http://localhost:3000)
 
-[**InfluxDB Dashboard**](https://localhost:8086) 
+[**InfluxDB Dashboard**](http://localhost:8086) 
 
 
 ## Docker Images Tested
