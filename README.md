@@ -1,6 +1,6 @@
 # Telegraf, InfluxDB, Grafana (TIG) Stack + MQTT broker and data generator
 
-Get up and running with your own data in TIG within minutes.
+Get up and running with live data in TIG within minutes.
 
 ## ⚡️ Getting Started
 
@@ -31,12 +31,18 @@ docker-compose up
 
 
 [**Grafana dashboard**](http://localhost:3000)
-UN: admin
-PW: admin
+
+UN/PW : admin/admin
+
 (you can select skip when prompted with new password message)
+
+Navigate to: Dashboards -> Sinusodial Oberservatory
 
 [**InfluxDB Dashboard**](http://localhost:8086) 
 
+UN/PW : admin/adminadmin
+
+![Components](./arch.svg "Components")
 
 ## Docker Images Tested
 Some versions is set to latest i docker compose.
@@ -51,7 +57,6 @@ Some versions is set to latest i docker compose.
 
 
 
-## Contributing
+## Antipattern disclaimers
 
-Contributions are always welcome!
-
+Exposed tokens, hardcoded host references, plug and pray db migration
