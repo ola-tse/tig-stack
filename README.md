@@ -2,6 +2,8 @@
 
 Get up and running with live data in TIG within minutes.
 
+![GIF](./docs/dash_midQ.gif "gif")
+
 ## ⚡️ Getting Started
 
 ### Prereqs: 
@@ -42,7 +44,7 @@ Navigate to: Dashboards -> Sinusodial Oberservatory
 
 UN/PW : admin/adminadmin
 
-![Components](./arch.svg "Components")
+![Components](./docs/arch.svg "Components")
 
 ## Docker Images Tested
 Some versions is set to latest i docker compose.
